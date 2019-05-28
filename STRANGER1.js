@@ -2,7 +2,7 @@
     Highcharts.chart('container_stranger1', {
 
         title: {
-          text: 'Highcharts Sankey Diagram'
+          text: 'Stranger Things Sankey Diagram'
         },
         series: [{
           keys: ['from', 'to', 'weight'],

@@ -7,7 +7,7 @@ Highcharts.chart('container_walking', {
         type: 'pie'
     },
     title: {
-        text: 'Walking Dead Sentiment by Emotion'
+        text: 'The Walking Dead Sentiment by Emotion'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

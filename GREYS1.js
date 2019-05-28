@@ -1,7 +1,7 @@
 Highcharts.chart('container_greys1', {
 
     title: {
-      text: 'Highcharts Sankey Diagram'
+      text: "Grey's Anatomy Sankey Diagram"
     },
     series: [{
       keys: ['from', 'to', 'weight'],

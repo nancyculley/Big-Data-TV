@@ -2,7 +2,7 @@
     Highcharts.chart('container_murder1', {
 
         title: {
-          text: 'Highcharts Sankey Diagram'
+          text: 'How to Get Away with Murder Sankey Diagram'
         },
         series: [{
           keys: ['from', 'to', 'weight'],

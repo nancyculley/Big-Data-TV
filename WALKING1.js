@@ -2,7 +2,7 @@
 Highcharts.chart('container_walking1', {
 
     title: {
-      text: 'Highcharts Sankey Diagram'
+      text: 'The Walking Dead Sankey Diagram'
     },
     series: [{
       keys: ['from', 'to', 'weight'],
