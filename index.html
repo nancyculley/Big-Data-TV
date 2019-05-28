@@ -1,0 +1,355 @@
+<!--formatted small screen positioning -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+<!-- Insert title here -->
+
+  <title>TV sentiment data</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+  <!-- reset css -->
+
+  <link rel="stylesheet" href="reset.css">
+
+  <!-- Bring in our bootstrap stylesheet -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ 
+ <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  
+  
+ 
+
+   
+    <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+
+      
+</head>
+
+
+
+<body>
+
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+
+
+
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <!-- A Gray horizontal navbar -->
+
+
+
+    <div style="background-color:rgb(83, 76, 76);" height: 250px;>
+
+            <div class='row align-items-center'>
+
+                    <div class="col-md-4" >
+            
+             
+                            <a class="nav-link" href="index.html" style="color:rgb(255, 255, 255);">  
+            
+                           Home</a>
+            
+        
+                    </div>
+            
+                    <div class="col-md-4" >
+            
+                        <h2 style="color:rgb(255, 255, 255);">TV Sentiment Analysis</h2>
+                        
+            
+                        
+                    </div>
+            
+                    <div class="col-md-2" align="right">
+            
+     
+            
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" href="#" role="button" 
+            
+                            aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 255, 255);">TV Shows</a>
+            
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            
+                                <a class="dropdown-item" href="GOT.html">Game of Thrones</a>
+            
+                                <a class="dropdown-item" href="StrangerThings.html">Stranger Things</a>
+            
+                                <a class="dropdown-item" href="WalkingDead.html">The Walking Dead</a>
+            
+                                <a class="dropdown-item" href="Greysanatomy.html">Grey's Anatomy</a>
+            
+                                <a class="dropdown-item" href="HowMurder.html">How to get Away with Murder</a>
+            
+                                <a class="dropdown-item" href="ThisIsUs.html">This is Us</a>
+            
+                            </div>
+            
+
+            
+                    </div>
+                    
+                    <div class="col-md-2" >
+            
+             
+                            <a class="nav-link" href="comparison.html" style="color:rgb(255, 255, 255);">  
+            
+                           Comparison</a>
+            
+        
+                    </div>
+            
+            
+                </div> 
+
+    </div>
+    <!-- background color -->
+
+        <!-- Opening Text -->
+
+    <div class = 'container' style="border: .5px solid">
+
+
+        <br>
+
+        <!-- container -->
+
+        <div class="box col-md-12" style="border: .5px solid"; align: Center;>
+
+        
+        <!-- Code for Scrolling Images -->
+
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel" height: 100px;>
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-2" data-slide-to="1"></li>
+              <li data-target="#carousel-example-2" data-slide-to="2"></li>
+              <li data-target="#carousel-example-2" data-slide-to="3"></li>
+              <li data-target="#carousel-example-2" data-slide-to="4"></li>
+              <li data-target="#carousel-example-2" data-slide-to="5"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="view">
+                  <img class="img-responsive" style="max-width:100%; max-height:100%; vertical-align:middle;" src="Images/GOT.jpg" alt="Game Of Thrones">
+                  <div class="mask rgba-black-light"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Game Of Thrones</h3>
+                  <p>GOT text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="img-responsive" style="max-width:100%; max-height:100%; vertical-align:middle;" src="Images/GA.jpg" alt="Grey's Anatomy">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Gray's Anatomy</h3>
+                  <p>GA text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="img-responsive" src="Images/HTGAWM.jpg" alt="How To Get Away With Murder">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">How To Get Away With Murder</h3>
+                  <p>How To Get Away With Murder text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="img-responsive" src="Images/StrangerThings.jpg" alt="Stranger_things">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Stranger Things</h3>
+                  <p>Stranger things text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="img-responsive" src="Images/TIU.jpg" alt="This Is Us">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">This Is Us</h3>
+                  <p>TIU text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="img-responsive" src="Images/TWD.jpg" alt="The Walking Dead">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">The Walking Dead</h3>
+                  <p>The Walking Dead text</p>
+                </div>
+              </div>                                          
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+          </div>
+
+          <!-- Code for carousal Text -->
+   
+          <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel" height: 100px;>
+            <!--Indicators-->
+
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Game Of Thrones</h3>
+                  <p>GOT text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Gray's Anatomy</h3>
+                  <p>GA text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">How To Get Away With Murder</h3>
+                  <p>How To Get Away With Murder text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Stranger Things</h3>
+                  <p>Stranger things text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">This Is Us</h3>
+                  <p>TIU text</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">The Walking Dead</h3>
+                  <p>The Walking Dead text</p>
+                </div>
+              </div>                                          
+            </div>
+
+          </div>
+
+
+    <!-- Visualizations -->
+
+        <!-- Header -->
+    </br>
+    
+
+        <hr> <!-- horizontal line -->
+
+
+        <!-- reference to github and my github page -->
+
+        <p> 
+
+            This page is hosted on Github. &emsp;
+
+            <a target="_blank" href="https://github.com/nancyculley/Medium-Data">
+
+                Web page repo link.
+
+            </a> &emsp;
+
+            
+
+            <a target="_blank" href="https://github.com/nancyculley/">See more projects here!</a>
+
+            &emsp; Contact: Big Data
+
+        </p> 
+
+       
+
+    </div>
+</div>
+
+
+
+<!-- API Key -->
+  <script type="text/javascript" src="config.js"></script>
+  <!-- Our JavaScript -->
+  
+<script src="GOT.js"></script>
+<script src="GREYS.js"></script>
+<script src="STRANGER.js"></script>
+<script src="THISISUS.js"></script>
+<script src="WALKING.js"></script>
+<script src="HTHAWM.js"></script>
+
+
+
+</body>
+
+</html>
