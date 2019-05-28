@@ -1,4 +1,4 @@
-// Build the chart
+// Build charts
 Highcharts.chart('container_got', {
     chart: {
         plotBackgroundColor: null,
@@ -54,3 +54,4 @@ Highcharts.chart('container_got', {
         }]
     }]
 });
+
